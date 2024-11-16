@@ -11,7 +11,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/auth/login', { email, password });
+      const response = await axios.post('syneai.vercel.app/api/auth/login', { email, password });
       localStorage.setItem('token', response.data.token);
       navigate('/cars');
     } catch (error) {
