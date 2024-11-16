@@ -14,7 +14,7 @@ const CarDetail = () => {
 
   const fetchCar = async () => {
     try {
-      const response = await axios.get(`syneai.vercel.app/api/cars/${id}`, {
+      const response = await axios.get(`/api/cars/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       console.log('Car Data:', response.data); // Debugging
