@@ -52,7 +52,7 @@ const Signup = ({ setIsAuthenticated }) => {
 
     try {
       setLoading(true);
-      const response = await axios.post('/api/auth/signup', {
+      const response = await axios.post('syneai.vercel.app/api/auth/signup', {
         email,
         password
       });
