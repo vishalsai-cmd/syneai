@@ -14,7 +14,7 @@ const CarsList = () => {
   
     const fetchCars = async () => {
       try {
-        const response = await axios.get('syneai.vercel.app/api/cars', {
+        const response = await axios.get('/api/cars', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         });
         setCars(response.data);
@@ -27,7 +27,7 @@ const CarsList = () => {
   
     const handleSearch = async () => {
       try {
-        const response = await axios.get(`syneai.vercel.app/api/cars/search?keyword=${searchTerm}`, {
+        const response = await axios.get(`/api/cars/search?keyword=${searchTerm}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         });
         setCars(response.data);
